@@ -1,7 +1,287 @@
+<h1.jumbotron>Dan Sotolongo
+
+<p>
+  I feel I must start with the motivation for making this site. Until recently,
+  creating a personal website struck me as frivolous or self-aggrandizing. "When I
+  have something meaningful to share, then I'll make one," I told myself. Though
+  I've yet to create something with meaningful impact that I think is worth
+  proselytizing, I've concluded that a personal website requires no such
+  contribution. A personal website corresponds to a single person, and it need be
+  no more exceptional than its corresponding person ought to be. That is to say,
+  it needn't be exceptional at all. The internet is a big space: there's enough
+  room for everyone.
+
+<p>
+  Here is my space. With it, I wish to do two things. First, I will cultivate a
+  public persona befitting my values, namely, honesty, curiosity, dedication, and
+  intellectual humility (more in the<a href="#philosophy">Philosophy section</a>).
+  Second, I wish to use this space as a rudimentary platform from which to share
+  ideas I find compelling. This second goal is more ambitious given that I have
+  yet to gain an audience with which to share these ideas. Still, a person with
+  no voice will never have an audience, so I must first speak for others to
+  listen. Only time will tell whether what I say is worth listening to.
+
+<section.page-header>
+  <a name="philosophy">
+    <h2>Philosophy
+
+  <p>
+    A comprehensive life philosophy is a big concept, so what follows is just a
+    brief summary of the ideas that drive both my work and personal life. It
+    deviates significantly (and intentionally) from "common sense" ethics, but is
+    heavily influenced by modern scientific philosophy. In particular, the ideas
+    of David Deutsch in <a href="http://beginningofinfinity.com/">The Beginning of
+    Infinity</a> resonate with me (though the arrogant tone of the book does not).
+    My pursuit of a comprehensive philosophy is ongoing, and I have much left to read.
+    However, I think its current state is sufficiently sophisticated to justify
+    sharing and discussing with others.
+
+  <h3>Epistemology
+
+  <p>
+    I'll start with how to determine the quality of a conjecture or hypothesis. This
+    breaks down into two characteristics, and I'll use the term <i>conjecture</i> when
+    speaking of the first characteristic and <i>hypothesis</i> when speaking of the
+    second. First, the instrinsic quality is a measure of the explanatory power of
+    the conjecture. <b>Arbitrary, circular, or inconsistent conjectures are poor
+    explanations and should not be admitted</b> (this criterion is taken directly from
+    David Deutsch). Note that arbitrarity, circularity, and inconsistency are not
+    easy to detect in highly complex theories, so this criterion is far from
+    trivial. The second characteristic is the extrinsic quality of the hypothesis,
+    how well the hypothesis describes reality. <b>The predictions of a hypothesis
+    should be tested against real observations</b> (i.e. the Scientific
+    Method). Notably, the observations should not be available when the hypothesis
+    is formulated.
+
+  <p>
+    Intuitively, these characteristics come from Mathematics and Science, respectively.
+    They serve the independent, complimentary goals of making a conjecture powerful and
+    true, again respectively. Seeking to justify my choice of epistemic assumptions
+    unfortunately exposes a deep flaw: it is justified by itself (circular), which
+    means it is also arbitrary and inconsistent. The best reason I have to believe
+    its truth is based on the evidence of millenia of human progress, which, of course,
+    was available to me when I (and others) formulated it. However, these are not reasons to dismiss
+    the theory: <i>all</i> epistemological theories are open to this criticism, known
+    as the <a href="https://en.wikipedia.org/wiki/Epistemology#Regress_problem">Regress Problem</a>
+    in Philosophy and its cousin the <a
+    href="https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems">
+    Incompleteness Theorem</a> in Mathematics. Note that <i>only</i> epistemological
+    theories make this problem unavoidable: the judgment criteria listed above can
+    and should be used to dismiss non-epistemological theories.
+
+  <p>
+    Still, we're in a bit of a mess if we're making exceptions right off the bat.
+    The best way to get around the regress problem is to accept that no theory can ever
+    be perfect: all we can do is to continually improve upon our current one.
+    This requires openness to new ideas at all levels of understanding, which leads
+    directly to the idea that <b>nothing is above criticism</b>, including the
+    notion that nothing is above criticism. Using the three propositions in bold
+    above, with the last being the most important, we establish a mechanism for
+    continual, self-reinforcing progress, or what David Deutsch calls "a beginning
+    of infinity".
+
+  <h3>Current Theories
+
+  <p>
+    I initially wanted to call this section "Conclusions", but it felt like too
+    final a word for the continually-evolving nature of my personal philosophy. As
+    I said above, one of my deepest values is intellectual humility. None of these
+    current theories is beyond reproach, though I am, of course, more confident in
+    some than others.
+
+  <h4>God and Religion
+
+  <p>
+    I don't think there is a God. The idea of God or gods fails spectacularly on
+    all the aforementioned measures of a good idea. Intrinsically, it is totally
+    arbitrary, circular by nature ("there is a God because it was always there"), and prone to self-
+    contradiction (especially in those religions with a large corpus of accumulated
+    scripture). Extrinsically, the evidence for the truth of religious belief is denied necessity
+    by its proponents, who claim that faith (which is to say belief without evidence)
+    is not only necessary but desirable. These premises make for an ideology that is
+    extraordinarily difficult to shake (not to mention the social context that
+    reinforces it further). Indeed, my gradual conversion from Christianity to
+    Atheism was a very distressing period of my life. By holding themselves above
+    criticism, religions fail the most important test of all.
+
+  <p>
+    So, I reject religion on the aforementioned grounds. Though I strive to remain
+    open to persuasion, this is a particular case where I have invested significant
+    time and research into searching for anything that could convince me otherwise.
+    I am skeptical that something yet remains, though, of course, I'm not totally
+    closed to the idea.
+
+  <p>
+    It is worth noting here that I'm not a militant atheist. I think there's
+    merit to the hypothesis that eliminating religion from modern society will remove
+    the fetters that have kept human creativity stumbling rather than bounding
+    forward. However, sudden change typically means greater polarization, which
+    increases conflict and potentially violence. This is a risk that should be
+    considered when pushing against the establishment, especially when trends
+    seem to point toward secularism in the long run anyway.
+
+  <h4>Purpose
+
+  <p>
+    Nothing "happens for a reason". Often cited as one of the fundamental reasons
+    for the abundance of religion, the desire for an existential purpose is an understandable
+    one. I think it is borne of two elements, one biological and the other rational.
+
+  <p>
+    Evolutionary psychology brings us the idea that humans gained an advantage by
+    being better able to understand the world than their less-enlightened
+    competitors. This understanding came from an instinctive curiosity, a desire to
+    find the reason things happened the way they do. This desire could not have been
+    instilled through rational thought, since it came before rational thought
+    existed. Therefore, our brains are wired to seek an underlying purpose for
+    anything and everything we encounter. Once we became intelligent enough to
+    conceive of our own existence, it was inevitable that we would seek an
+    underlying purpose for that too. However, this is merely an instinct that is
+    being applied outside its useful scope. Cravings for purpose, like cravings
+    for sex and food, can lead to highly undesirable outcomes.
+
+  <p>
+    The rational aspect of the seach for purpose is the one that gives it legs
+    in this era of enlightenment. Namely, it is the juxtaposition of a larger
+    purpose with <a href="https://en.wikipedia.org/wiki/Nihilism">nihilism</a>:
+    "Nothing happens for a reason, so everything is pointless." Faced with a choice
+    between these two alternatives, the vast majority of people understandably
+    choose the former. Indeed, any who whole-heartedly embraced nihilism would
+    have a dramatically-reduced probability of propagating their genes and memes,
+    either due to suicide or despondence. I am no nihilist, but as I said, I also
+    do not believe in purpose. Instead, I think the choice is merely a false
+    dichotomy brought about by a
+    <a href="https://en.wikipedia.org/wiki/Optical_illusion#Cognitive_illusions">cognitive illusion
+    for which I do not know the name (please let me know if you do). I'll call it
+    an illusion of scale by abstraction.
+
+  <p>
+    The human mind is only able to retain and reason about a certain degree of complexity.
+    In order to reason about highly-complex systems, we use approximations called
+    <i>abstractions</i>, which package up the complexity of a system into
+    a more simple representation with rules that approximate the behavior of the
+    underlying system. For example, the idea of a government is an abstraction
+    of the actual behavior of large numbers of people organized in a mutually-#
+    beneficial way. Similarly, a star is an abstraction for the atoms
+    collected together in such a way that gravity causes fusion to occur, and a galaxy for the
+    collections of hundreds of billions of stars that can spontaneously form.
+    Abstraction is an invaluable tool in the repertoire of reason, as it allows
+    us to think about concepts that vastly exceed the inherent capability of
+    our brains. Unfortunately, it also comes with a cost: reasoning with abstractions
+    requires us to ignore the true complexity of the system we are trying to
+    analyze. Thus, it becomes easy to fall into the trap of thinking that everything
+    we can think of has about the same degree of complexity. This tendency
+    can fool people into thinking that a lack of an overriding purpose to the universe
+    somehow nullifies its significance. This idea misses the fact that "the universe"
+    is almost entirely incomprehensible to the human mind. It is a structure
+    containing somewhere around 10^22 stars, each of which is about 10^9 meters
+    in diameter. For a species that evolved to think about objects ranging from
+    10^-3 to 10^3 meters in size, these scales are meaningless outside of the helpful
+    abstractions we use to think about them. Similar discrepancies between the
+    limits of existence and of our consciousness exist in many other respects:
+    time, energy, mass, social networks, financial constructs, artistic endeavors.
+    Losing track of the sheer enormity of our universe is all too easy. Losing
+    sight of the fact that greater scale not only increases the number of actors
+    in a system, but also the complexity of their interactions (by the square
+    of the multiple for observant graph theorists), is even easier.
+
+  <p>
+    The truth is that we are currently (and likely, forever will be) incapable of
+    comprehending the potential inherent in a universe with intelligent life. Trying
+    to ascribe an ethno-centric purpose to such a vast structure is not just naive.
+    It is arrogant, and would yield a result far less appealing than the truth.
+    Ironically, trying to apply a purpose external to humanity also trivializes the
+    importance of humanity itself to the future of the universe. Intelligence (or
+    "explanatory knowledge" in the words of Deutsch) plays a critically-important
+    role in this theory, making us (or rather, all intelligent life) the most
+    significant emergent phenomenon in the universe.
+
+  <h4>Ethics and Morality
+
+  <p>
+    So, then, if not from religion, where does ethics come from? Absent a
+    purpose, how can we decide what we, as a species or individuals, <i>should</i>
+    do?
+
+  <p>
+    Well, until recently, I was a
+    <a href="https://en.wikipedia.org/wiki/Two-level_utilitarianism">Two-level Utilitarian#
+    , which contends that the goal of ethics is to maximize the happiness of
+    people. It does so by laying out general rules that people should follow most
+    of the time, but leaving room for exceptions when a decision that breaks
+    these rules would yield a superior outcome. This theory works for most ethical
+    dilemmas, giving good results for situations like common crime and wars.
+    Unfortunately, it has two significant problems. Firstly, it suffers from the
+    same circularity as our epistemological theory: the choice of "people's happiness"
+    is an arbitrary one. Secondly, its definition exposes it to all sorts of
+    moral gray areas where it has no say. What defines a "person"? What is their
+    "happiness"? The first question causes utilitarianism to stumble over questions
+    like the ethics of animal treatment, abortion, and mentally retarded humans.
+    The second one trips on the question of drugs and virtual realities: if we
+    could create technology that allowed people to be happy all the time at the
+    cost of species-wide stagnation, should we?
+
+  <p>
+    These are tremendously difficult questions to answer, even though most people
+    do have an opinion. The problem is that there is no agreed-upon goal
+    to aim towards for any sort of consensus. The utilitarian goal stands on too
+    weak a foundation to provide a basis for all ethical questions.
+
+  <p>
+    A goal that solves these problems to pursue is knowledge (again, I'm building
+    off of Deutsch here). What follows is pretty abstract and certainly needs more
+    exploration (Deutsch's treatment is also disappointingly superficial), but it is
+    a powerful idea even before such development. The thinking is as follows.
+    Knowledge is information that describes reality. It is created by intelligent
+    beings. It is the ultimate enabler: anything that is physically possible can be
+    accomplished with the right knowledge. It leads to the creation of interesting
+    and beautiful phenomena: life is the instantiation of the knowledge encoded into
+    DNA and the biological machinery that replicates it (although be aware that this
+    knowledge, created through the slow process of natural selection, is inherently
+    less powerful than the <i>explanatory knowledge</i> people are able to create
+    via conjecture, criticism, and experimentation). Knowledge is a fundamentally
+    important emergent phenomenon in the universe, and the pursuit of it is a goal
+    worthy of a central place in our theory of ethics. So, I think a theory of ethics
+    superior to utilitarianism is one that, rather than maximizing knowledge,
+    maximizes the collective knowledge of society over time.
+
+  <p>
+    A few examples can help clarify what I mean. As I said, life is a tremendous
+    store of knowledge. This is clear from the fact that, despite our considerable
+    understanding of the laws that govern stars lightyears away, we understand
+    relatively little of the mechanisms that govern our own bodies. Thus, this theory
+    has already given life a high valuation; considerably higher than the simple
+    constructs that are rocks or rivers. The more complex the life form,
+    the more valuable it is, matching our intuition that the life of a dog or monkey
+    is worth more than the life of a tree or jellyfish. Intelligent life, however, gets a
+    special place because of our ability to create knowledge far faster than any
+    other life form. We are more important than they are, though not infinitely
+    more so.
+
+  <h3>Room for Improvement
+
+  <p>
+    The above is incomplete. It stays pretty far away from practical topics like
+    economics, politics, or personal relationships. In part, the incompleteness is
+    pragmatic: I can't take the time to write a treatise on the entirety of my life
+    philosophy. A larger part is the incomplete nature of my life philosophy. It's a
+    work in progress, and I intend to add more as I develop it more. However, I
+    think what I have so far forms a strong foundation to build on. It also provides
+    a strong motivation to pursue a successful, fulfilling career: the creation  of
+    knowledge as the ultimate good. For now, that'll have to do.
+
+
+<section.page-header>
+  <h2>Professional
+
+<section.page-header>
+  <h2>Personal
+
 <h1.jumbotron>
   Welcome to Yesod!
 
-<.page-header><h2>Starting
+<.page-header>
+  <h2>Starting
 
 <section.list-group>
   <span .list-group-item>
