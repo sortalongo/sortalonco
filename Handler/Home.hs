@@ -1,6 +1,7 @@
 module Handler.Home where
 
 import Import
+import Handler.Util
 import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3,
                               withSmallInput)
 import Text.Julius (RawJS (..))
@@ -17,7 +18,7 @@ getHomeR = do
     (formWidget, formEnctype) <- generateFormPost sampleForm
     let submission = Nothing :: Maybe (FileInfo, Text)
         handlerName = "getHomeR" :: Text
-    defaultLayout $ do
+    defaultLayout . withSidebar HomeR $ do
         let (commentFormId, commentTextareaId, commentListId) = commentIds
         aDomId <- newIdent
         setTitle "Welcome To Yesod!"

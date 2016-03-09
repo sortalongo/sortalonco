@@ -1,0 +1,6 @@
+<div .sidebar role="navigation" data-spy="affix" data-offset-top="49">
+  <ul .hidden-xs.hidden-sm>
+    $forall (page, isActive) <- pages
+      <li role="presentation">
+        <a href="@{page}" :isActive:.active>
+          #{init $ show $ page}

@@ -1,0 +1,8 @@
+.banner
+  color: gray
+  font-size: 24px
+  padding: .3em
+
+  > small
+    margin: .5em
+    font-size: 14px

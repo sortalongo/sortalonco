@@ -6,4 +6,6 @@
 
 / HomeR GET POST
 
+/philosophy PhilosophyR GET
+
 /comments CommentR POST
