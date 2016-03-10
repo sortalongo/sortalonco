@@ -1,8 +1,11 @@
 $maybe msg <- mmsg
   <div #message>#{msg}
-<div .row>
-  <div .banner>
+<div .row.banner>
+  <div .col-xs-2.banner-title>
     sortalon.co
-    <small>
-      Dan Sotolongo
+
+  <div .col-xs-10.banner-follow>
+      Dan Sotolongo <br/>
+      @sortalongo <br/>
+      sortalongo@gmail.com
 ^{widget}

@@ -1,8 +1,13 @@
 .banner
   color: gray
-  font-size: 24px
-  padding: .3em
+  padding: 1em 0
 
-  > small
-    margin: .5em
-    font-size: 14px
+  > .banner-title
+    font-size: 24px
+
+  > .banner-follow
+    color: gray
+    font-size: 12px
+
+  > .banner-follow::first-line
+    font-weight: bold
