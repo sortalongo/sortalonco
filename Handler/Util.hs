@@ -4,7 +4,7 @@ import Import
 import Data.List (init)
 
 navPages :: [Route App]
-navPages = [ HomeR, PhilosophyR ]
+navPages = [ HomeR, PhilosophyR, MetaR ]
 
 withSidebar :: Route App -> Widget -> Widget
 withSidebar route content = do

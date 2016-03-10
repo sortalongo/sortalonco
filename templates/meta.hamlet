@@ -1,0 +1,53 @@
+<h1>Meta</h1>
+
+<p>
+  This page contains information about this site, hence the name.
+
+<h2>Motivation
+
+<p>
+  "Why should I make a website? I don't have anything worth " This question was one that has long held me back
+  from doing so.
+
+   Until recently, creating a personal website struck me as
+  frivolous or self-aggrandizing. "When I have something meaningful to share, then
+  I'll make one," I told myself. Though I've yet to create something with
+  meaningful impact that I think is worth proselytizing, I've concluded that a
+  personal website requires no such contribution. A personal website corresponds
+  to a single person, and it need be no more exceptional than its corresponding
+  person ought to be. That is to say, it needn't be exceptional at all. The
+  internet is a big space: there's enough room for everyone. If I do end up creating
+  something worth sharing, then that deserves its own website.
+
+<p>
+  Here is my space. With it, I wish to do two things. First, I will cultivate a
+  public persona befitting my values, namely, honesty, curiosity, dedication, and
+  intellectual humility (more in the <a href=@{PhilosophyR}>Philosophy section</a>).
+  Second, I wish to use this space as a rudimentary platform from which to share
+  ideas I find compelling. This second goal is more ambitious given that I have
+  yet to gain an audience with which to share these ideas. Still, a person with
+  no voice will never have an audience, so I must first speak for others to
+  listen. Only time will tell whether what I say is worth listening to.
+
+<h2>Technical Details
+
+<p>
+  This site is written in Haskell, using the <a href="http://www.yesodweb.com/">Yesod</a>
+  framework. While, I don't have a ton of experience with web-serving frameworks, but I
+  have worked with a few: Apache, <a href="http://expressjs.com/">ExpressJs</a>,
+  Macaw (Twitter's original Scala framework), and <a href="https://twitter.github.io/finatra/">Finatra 2</a>.
+  Yesod is far and away the most pleasant I've worked with, not least because its
+  <a href="http://www.yesodweb.com/book">User Guide</a> is excellent. Its main
+  selling point is the tight integration between the server code and served
+  content: the use of Template Haskell allows you to have a single source of
+  truth (verified by the compiler!) instead of having one on each side of the
+  API boundary, and the modular design of the components (sites, widgets,
+  stores) facilitates reusable code. As a bonus, it has an excellent development
+  mode that automatically rebuilds the site when you make any changes (akin to
+  what I think Rails does).
+
+<p>
+  I've dabbled with <a href="https://facebook.github.io/react/">React</a> and
+  <a href="https://www.polymer-project.org/1.0/">Polymer</a>, though I'm not sure
+  how well they play with Yesod. This site is not complicated enough to require
+  those libraries. Once I take on a more WebApp-like project, I'll report back.

@@ -8,4 +8,6 @@
 
 /philosophy PhilosophyR GET
 
+/meta MetaR GET
+
 /comments CommentR POST
