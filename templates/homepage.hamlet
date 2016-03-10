@@ -1,29 +1,36 @@
-<h1>Dan Sotolongo
+<h1>About Me
 
 <p>
-  I feel I must start with the motivation for making this site. Until recently,
-  creating a personal website struck me as frivolous or self-aggrandizing. "When I
-  have something meaningful to share, then I'll make one," I told myself. Though
-  I've yet to create something with meaningful impact that I think is worth
-  proselytizing, I've concluded that a personal website requires no such
-  contribution. A personal website corresponds to a single person, and it need be
-  no more exceptional than its corresponding person ought to be. That is to say,
-  it needn't be exceptional at all. The internet is a big space: there's enough
-  room for everyone.
+  Let me tell you a little about myself. I live in Seattle, WA with my wonderful
+  fiancée, Iryna. We own two dogs: Socrates, a spoiled, 10-year-old, 18 lb Bichon
+  Frise; and Minkowski, a rambunctious Border Collie puppy who's growing faster
+  than I'll be able to update this page. My pastimes are diverse (too much so,
+  though I can't give any of them up), and include nature sports like rock
+  climbing (mostly indoors), hiking, mountain biking, kiteboarding, and
+  snowboarding; playing video games; watching TV; and cooking. My intellectual
+  interests focus on Computer Science, though I'm also passionate about Physics,
+  Math, and Philosophy, and make occasional forays into Economics and History.
+
+<h3>Career
+<p>
+  I work as a software engineer for Google, on the Cloud Dataflow team. Before
+  that, I was on the Observability team at Twitter. Before that, I was working
+  on my Physics degree at Caltech.
+
+<h3>Beliefs
+<p>
+  I believe that knowledge is the ultimate good in the universe, knowledge of how
+  the world works, knowledge of how to acquire knowledge more quickly, knowledge
+  of how to spread it more efficiently. My life goal is to make the most
+  significant contributions to human knowledge that I can. Professionally, I want
+  to create (or contribute to) tools that empower people to make their own
+  contributions to human knowledge. Socially, I want to have loyal, smart friends
+  who will challenge my preconceptions and make life fun. Personally, I want to be
+  part of a family that shares my goals, with a wife who understands me and
+  improves me and kids who will one day make their own contributions to human
+  knowledge. My happiness is crucial to these goals, not as an end of its own, but
+  because I'm most motivated when I am happy.
 
 <p>
-  Here is my space. With it, I wish to do two things. First, I will cultivate a
-  public persona befitting my values, namely, honesty, curiosity, dedication, and
-  intellectual humility (more in the <a href=@{PhilosophyR}>Philosophy section</a>).
-  Second, I wish to use this space as a rudimentary platform from which to share
-  ideas I find compelling. This second goal is more ambitious given that I have
-  yet to gain an audience with which to share these ideas. Still, a person with
-  no voice will never have an audience, so I must first speak for others to
-  listen. Only time will tell whether what I say is worth listening to.
-
-
-<section.page-header>
-  <h2>Professional
-
-<section.page-header>
-  <h2>Personal
+  These beliefs are derived from my personal <a href="@{PhilosophyR}">philosophy</a>.
+  I encourage you to read it, and welcome feedback on it.
