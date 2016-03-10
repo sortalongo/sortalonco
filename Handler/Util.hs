@@ -2,6 +2,7 @@ module Handler.Util where
 
 import Import
 import Data.List (init)
+import Text.Julius (RawJS (..))
 
 navPages :: [Route App]
 navPages = [ HomeR, PhilosophyR, MetaR ]
@@ -20,5 +21,7 @@ withSidebar route content = do
 sidebarWidget :: Route App -> Widget
 sidebarWidget currRoute = do
   let pages = map (\ route -> (route, route == currRoute)) navPages
+  sidebarId <- newIdent
   $(widgetFile "sidebar")
-  addScript $ StaticR js_bootstrap_min_js
+  addScript $ StaticR js_util_js
+  addStylesheet $ StaticR css_util_css

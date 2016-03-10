@@ -1,4 +1,4 @@
-<div .sidebar role="navigation" data-spy="affix" data-offset-top="49">
+<div id="#{sidebarId}" .sidebar role="navigation">
   <ul .hidden-xs.hidden-sm>
     $forall (page, isActive) <- pages
       <li role="presentation">

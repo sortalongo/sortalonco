@@ -1,0 +1,2 @@
+const sidebar = document.getElementById("#{rawJS sidebarId}")
+makeSticky(sidebar)

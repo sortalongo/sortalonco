@@ -1,7 +1,3 @@
-.sidebar.affix
-  top: 0px
-
-
 .sidebar
   font-size: 12pt
 
