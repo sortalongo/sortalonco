@@ -27,5 +27,5 @@ database:
   database: "_env:SQLITE_DATABASE:sortalonco.sqlite3"
   poolsize: "_env:SQLITE_POOLSIZE:10"
 
-copyright: Content copyrighted in 2016. Website code is available publicly on Github
+copyright: "Content copyright 2016"
 #analytics: UA-YOURCODE
