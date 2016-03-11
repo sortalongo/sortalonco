@@ -17,3 +17,7 @@
   position: fixed;
   right: 0;
 }
+
+.first-line-bold::first-line {
+  font-weight: bold;
+}

@@ -4,9 +4,6 @@ import Import
 import Data.List (init)
 import Text.Julius (RawJS (..))
 
-navPages :: [Route App]
-navPages = [ HomeR, PhilosophyR, MetaR ]
-
 withSidebar :: Route App -> Widget -> Widget
 withSidebar route content = do
   [whamlet|

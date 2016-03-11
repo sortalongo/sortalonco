@@ -1,0 +1,221 @@
+<h1>Career
+
+<p>
+  I think of life as a long adventure through an infinite, mountainous terrain.
+  The landscape is knowledge, and the exploration thereof is learning. We all start
+  in the well-travelled lowlands, gradually making our way to more challenging
+  regions. Most of the time, we use maps to help us navigate, and we work with others
+  to surmount the challenges. The nature of the pursuit is to ultimately find
+  oneself in an unknown land, breaking new ground in the hopes of finding
+  interesting new sights and hopefully taking the time to mark them on our map.
+
+<p>
+  In this landscape, the elevation at a location is the unreachability of that
+  knowledge, and the steepness of the slope is the difficulty of the route to
+  get there. Some achievements are at the top of sheer cliffs with miniscule
+  holds all the way up, while others are long treks up gradually-ascending
+  terrain. Most knowledge can be acquired in multiple ways, trading off
+  difficulty for time or vice versa. Some routes that are passable to some are
+  too strenuous for others, but there's usually another way around given the
+  determination.
+
+<p>
+  Every person, throughout their life, becomes familiar with different regions
+  of the landscape. However, each contributes some of that familiarity to the
+  atlases that are universities, governments, corporations, cultures, and
+  families. The total mapped out area of this world is the sum of human
+  knowledge. I want to make that bigger.
+
+
+
+<h2>The Terrain Ahead
+
+<h3>The summit in the distance
+
+<p>
+  Motivating oneself is much easier when one has something to strive towards.
+  For me, that pursuit is what I'll call a distributed programming framework.
+  Let me explain what I mean by this, since it's not an idea that I've yet
+  encountered in the wild (understandably, since it is unashamedly ambitious).
+
+<p>
+  I'll start with the current lay of the computer-engineering land. As things
+  stand, computer engineering is rigidly componentized. There are broad
+  categories of technologies each with restricted interoperatibility with the
+  others. One way to break it down is as follows.
+  <ul>
+    <li .first-line-bold>
+      Hardware<br/>
+      This includes networking hardware, general-purpose computation, and specialized
+      computation like GPUs, supercomputers, and IBM's new "neural" computation.
+    <li .first-line-bold>
+      Operating systems<br/>
+      In the last decade, with the rise of commodity hardware and containerization,
+      infrastructure has been converging on Linux as the OS of choice (setting
+      distributions aside). Of course, Windows and OS X aren't going anywhere in
+      the consumer space, and the entry of newcomers like Android, ChromeOS, and
+      iOS will have unpredictable effects on the consumer space.
+    <li .first-line-bold>
+      Programming languages<br/>
+      Despite the entrenchment of well-established staples (C++, Java, JS, C# (I
+      guess?)), the field of programming languages has demonstrated a surprising
+      averseness to stagnation (or even convergenece). A number of trends are
+      apparent, including: dynamic typing (Python, Ruby), functional programming
+      (Haskell, Scala, Clojure, F#), "stick it on the JVM" syndrome (Clojure,
+      Groovy, Scala), stronger type systems (Haskell, Scala, Rust), re-thinking
+      systems programming (D, Go, Rust), and provability (Agda, Coq). There are
+      so many programming languages that engineers are expected to know more
+      than one and be able to learn new ones quickly.
+    <li .first-line-bold>
+      Infrastructure<br/>
+      This is further divided into databases, data processing, and
+      orchestration. All of these have made tremendous advances in the last 15
+      years. The advances were kicked off by Google with BigTable, MapReduce,
+      and Borg, respectively, but the ideas have made their way into OSS (e.g.
+      Hadoop, Cassandra, Mesos) and innovation is happening everywhere with the
+      NoSQL movement (Manhattan, MongoDB, Riak, RoachDB, Spanner), stream
+      processing (Flink, Samza, Spark, Storm) and further innovations on that
+      (lambda architecture, Dataflow model), and an abundance of orchestration
+      systems, both self-hosted (Docker, Kubernetes, Mesos) and not (AWS, Azure,
+      GCE).
+    <li .first-line-bold>
+      Application services<br/>
+      The land of the webserver and intermediate application-specific logic, these
+      services and the libraries they're built on evolve as quickly as the demands
+      on applications. Blink, and you'll be left behind.
+    <li .first-line-bold>
+      Application frontends<br/>
+      The most important are HTML/CSS/JS, Android, and iPhone. Thanks to their
+      ubiquity, these foundational technologies are protected (or held back)
+      from rapid evolution. However, higher levels of abstraction (Web libraries
+      in particular) evolve along with the underlying application services.
+      Additionally, their ubiquity also means it's unprecedentedly easy to ship
+      products to the consumer.
+
+  Componentization can be good because it allows systems to evolve
+  independently, removing the frictions implied by coevolution. However, it
+  comes at a cost: the place you draw the line of componentization becomes a
+  wall. Any problems that require their solutions to interact with both sides of the
+  wall have to interact with them using a common medium. For example, with the last 4
+  categories listed, that means using a network API. Using the network means two
+  bad things. First, things just got a lot more complicated: you now have to
+  think about serialization, latency, and error handling. Second, tests are much
+  harder to write: there are more variables to account for and fewer tools to
+  help.
+
+<p>
+  The peak I see in the distance eliminates these problems. It works by pushing
+  the componentization behind existing layers of abstraction. In particular, it
+  would push application frontends, application services, and infrastructure
+  into the programming language component. Instead of dealing with unweildy
+  components that talk over the network, I want to push the notion of end-to-end
+  network communication behind the absraction of a programming language (note
+  that I said <i>end-to-end</i>, where current languages just give you a single
+  end of the pipe). Operating systems and hardware do not share a common medium
+  with the other components, and so are out of reach at the moment.
+
+<p>
+  So, what does this buy us? Merging the components means the components become
+  libraries, not whole applications. They can interact via a programmatic API
+  instead of a network API, so a compiler can check for the kinds of errors that
+  are otherwise only possible to check with integration tests. Deployment of
+  large-scale infrastructure becomes straightforward thanks to the homogenized
+  system. Most importantly, arbitrary application boundaries disappear, allowing
+  a whole new level of reusability.
+
+<p>
+  Predictably, this change introduces tremendous challenges. Absorbing
+  end-to-end communication means the "language" has to know about the network
+  and the computers on it. This makes it a totally different beast from a
+  regular programming language. It now needs a distributed runtime, with all the
+  problems that brings (Orleans is an interesting project in this direction).
+  Solving the distributed runtime problem requires powerful abstractions that
+  implicitly handle the common problems of distribution, while remaining
+  customizable enough to patch the holes when the abstractions leak (Finagle is
+  a fascinating endeavor to do this with an RPC library). Another big problem is
+  supporting the independent evolution I mentioned above. That means the system
+  must support partial deployments (e.g. just deploy the database for a specific
+  application). The uniformity of the proposed system is itself a challenge. If
+  the plethora of programming languages teaches us anything, it's that no one
+  language will ever fulfill all requirments and tastes. Accepting this, we must
+  design a programming language that allows itself to evolve along with its
+  libraries (Haskell is an interesting case study with its language extensions),
+  maybe even creating an intermediate language for the runtime that languages
+  can compile to (similar to JVM bytecode). The system itself should be
+  open-source, of course, but it should also allow the distribution of
+  closed-source packages, similarly to what Java can do, but maybe even with
+  licensing to support a variety of business models.
+
+<p>
+  I don't know that such a system is feasible in my lifetime, or even that it
+  is a good idea. It may be that the current networked component model is the
+  way to go, and someone will figure out a way to make it manageable. If that
+  becomes the case, I'll happily change course and lend the maps I have drawn in
+  pursuit of the new peak. Until then, this is the summit I'm heading
+  towards, and looking for the best route there keeps me motivated and happy.
+
+
+<h3>Scouting the landscape
+
+<p>
+  I expect the path to a distributed programming framework will be long and
+  circuitous, so I'm scouting the area before attempting to summit.
+
+<p>
+  My time at Twitter served this end, giving me an understanding of the
+  difficulties of running applications that run across hundreds or thousands of
+  machines. I learned about the importance of metrics from my team, the
+  unweildiness of multi-zone deployments from my time writing a multi-zone
+  alerting sysetm, the difficulties of the network through Finagle,  the
+  downsides of coordination from our Zookeeper clusters, the unforeseen issues
+  that can arise in storage systems through Manhattan, the varied requirements
+  of orchestration from Aurora and Mesos, and the discomfort of working in an
+  overly-complex type system from Scala.
+
+<p>
+  I've continued to do independent research, particularly in
+  the mathematical side of Computer Science. My friend and former intern Kyle
+  introduced me to Dependent Type Theory, a fascinating type theory that allows
+  one to write and proove <a
+  href="https://en.wikipedia.org/wiki/Constructivism_(mathematics)">constructivist</a>
+  mathematical theories that are checked by the type checker for correctness.
+  The programming language Adga (<a
+  href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Overview</a>,
+  <a href="http://learnyouanagda.liamoc.net/pages/introduction.html">Learn You an Agda
+  ) is a promising approach to making this idea more practically useful. To
+  familiarize myself with Rust's interesting memory ownership model, I wrote a
+  simple <a href="https://github.com/sortalongo/gas_sim"> gas simulator</a>
+  (inspired by an assignment Iryna had in on of her Astrophysics classes).
+
+<p>
+  My new position on Google's Cloud Dataflow team is an opportunity
+  to learn about the demands of data processing.
+
+<p>
+  I think of these experiences as (relatively) short climbs surrounding the main
+  peak (reading the <a
+  href="http://www.cse.chalmers.se/~ulfn/papers/thesis.pdf">Agda paper</a> was a
+  brutal two weeks of struggling up a <a
+  href="https://www.youtube.com/watch?v=bEpMR86wxeQ">granite face</a> (no I'm
+  not saying it was as hard as the Dawn Wall, just that El Cap is awesome)).
+  Through these smaller climbs, I get glimpses of potential routes to the main
+  peak. Plus, each climb is satisfying in its own right. That's how I
+  determine what I want to work on.
+
+<h2>The Roads Behind
+
+<h3>Google <small>At the head of a new trail</small>
+
+<h3>Twitter <small>A path to a new land</small>
+
+<h3>Caltech <small>Above the tree line</small>
+
+<h3>Carroll High School <small>Strolling through the grassy foothills</small>
+
+<h2> Afterword
+
+<p>
+  The landscape metaphor is inadequate for capturing the whole picture, since it entirely
+  misses the self-reinforcing nature of knowledge acquistion. That is to say,
+  knowledge begets more knowledge, typically faster. I still like the metaphor.
+  It plays to my love of nature, and is a useful medium for expressing my thoughts.

@@ -6,8 +6,8 @@
 
 / HomeR GET POST
 
-/philosophy PhilosophyR GET
-
+/career CareerR GET
 /meta MetaR GET
+/philosophy PhilosophyR GET
 
 /comments CommentR POST
