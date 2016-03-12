@@ -27,5 +27,5 @@ database:
   database: "_env:SQLITE_DATABASE:sortalonco.sqlite3"
   poolsize: "_env:SQLITE_POOLSIZE:10"
 
-copyright: "Content copyright 2016"
+copyright: "© 2016 Dan Sotolongo"
 #analytics: UA-YOURCODE

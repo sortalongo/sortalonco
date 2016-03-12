@@ -21,8 +21,6 @@ library
                      Settings
                      Settings.StaticFiles
                      Handler.Common
-                     Handler.Home
-                     Handler.Comment
                      Handler.Simple
                      Handler.Util
 

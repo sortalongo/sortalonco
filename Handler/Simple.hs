@@ -3,6 +3,11 @@ module Handler.Simple where
 import Import
 import Handler.Util
 
+getHomeR :: Handler Html
+getHomeR = defaultLayout . withSidebar HomeR $ do
+  setTitle "sortalon.co"
+  $(widgetFile "homepage")
+
 getCareerR :: Handler Html
 getCareerR = defaultLayout . withSidebar CareerR $ do
   setTitle "Career"
