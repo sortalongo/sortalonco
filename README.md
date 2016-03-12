@@ -8,7 +8,7 @@ site template, builds with
 ## Development
 
 Stack is the build tool that automates most of the building commands you need:
-```
+```bash
 $ stack build
 $ stack test
 $ stack ghci
@@ -17,7 +17,7 @@ $ stack exec -- $COMMAND
 These are all quite useful, and do what you'd expect. The latter two perform
 their respective tasks using the dependencies declared in the cabal file. The
 tool is also well-documented:
-```
+```bash
 $ stack --help
 ```
 
@@ -25,7 +25,7 @@ Yesod has a convenient development mode that automatically recompiles the code
 when you make changes to it. I haven't yet been able to get this working in the
 Dockerized container, so you have to tell Stack to run it directly on your
 machine:
-```
+```bash
 $ stack --no-docker exec -- yesod devel
 ```
 > Note: This will likely require rebuilding all of the app's dependencies,
@@ -34,4 +34,32 @@ $ stack --no-docker exec -- yesod devel
 ## Deployment
 
 TBD. I'm working on making a Kubernetes configuration and setting up GCmptE &
-GCntrE accounts.
+GCntrE accounts. Below is what I have so far:
+
+I did all my work from OS X, so I assume that environment.
+
+Ensure you have Docker set up:
+```bash
+$ docker-machine ls
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER    ERRORS
+default   -        virtualbox   Running   tcp://192.168.99.100:2376           v1.10.3
+$ docker-machine start default # if the VM isn't running.
+$ eval $(docker-machine env default) # set up ENV for docker CLI
+$ docker ps # just check things are set up right
+CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS               NAMES
+```
+
+Build a Docker image:
+```bash
+$ stack image container
+```
+
+Run the image:
+```bash
+$ docker run sortalongo/sortalonco sortalonco
+```
+
+Make sure it works:
+```bash
+$ docker exec `docker ps | grep sortalonco | awk '{ print $1 }'` curl http://localhost:3000/
+```
