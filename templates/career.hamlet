@@ -59,7 +59,7 @@
       Programming languages<br/>
       Despite the entrenchment of well-established staples (C++, Java, JS, C# (I
       guess?)), the field of programming languages has demonstrated a surprising
-      averseness to stagnation (or even convergenece). A number of trends are
+      averseness to stagnation (or even convergence). A number of trends are
       apparent, including: dynamic typing (Python, Ruby), functional programming
       (Haskell, Scala, Clojure, F#), "stick it on the JVM" syndrome (Clojure,
       Groovy, Scala), stronger type systems (Haskell, Scala, Rust), re-thinking
@@ -107,9 +107,9 @@
   The peak I see in the distance eliminates these problems. It works by pushing
   the componentization behind existing layers of abstraction. In particular, it
   would push application frontends, application services, and infrastructure
-  into the programming language component. Instead of dealing with unweildy
+  into the programming language component. Instead of dealing with unwieldy
   components that talk over the network, I want to push the notion of end-to-end
-  network communication behind the absraction of a programming language (note
+  network communication behind the abstraction of a programming language (note
   that I said <i>end-to-end</i>, where current languages just give you a single
   end of the pipe). Operating systems and hardware do not share a common medium
   with the other components, and so are out of reach at the moment.
@@ -137,7 +137,7 @@
   must support partial deployments (e.g. just deploy the database for a specific
   application). The uniformity of the proposed system is itself a challenge. If
   the plethora of programming languages teaches us anything, it's that no one
-  language will ever fulfill all requirments and tastes. Accepting this, we must
+  language will ever fulfill all requirements and tastes. Accepting this, we must
   design a programming language that allows itself to evolve along with its
   libraries (Haskell is an interesting case study with its language extensions),
   maybe even creating an intermediate language for the runtime that languages
@@ -165,8 +165,8 @@
   My time at Twitter served this end, giving me an understanding of the
   difficulties of running applications that run across hundreds or thousands of
   machines. I learned about the importance of metrics from my team, the
-  unweildiness of multi-zone deployments from my time writing a multi-zone
-  alerting sysetm, the difficulties of the network through Finagle,  the
+  unwieldiness of multi-zone deployments from my time writing a multi-zone
+  alerting system, the difficulties of the network through Finagle,  the
   downsides of coordination from our Zookeeper clusters, the unforeseen issues
   that can arise in storage systems through Manhattan, the varied requirements
   of orchestration from Aurora and Mesos, and the discomfort of working in an
@@ -176,7 +176,7 @@
   I've continued to do independent research, particularly in
   the mathematical side of Computer Science. My friend and former intern Kyle
   introduced me to Dependent Type Theory, a fascinating type theory that allows
-  one to write and proove <a
+  one to write and prove <a
   href="https://en.wikipedia.org/wiki/Constructivism_(mathematics)">constructivist</a>
   mathematical theories that are checked by the type checker for correctness.
   The programming language Adga (<a
@@ -185,7 +185,7 @@
   ) is a promising approach to making this idea more practically useful. To
   familiarize myself with Rust's interesting memory ownership model, I wrote a
   simple <a href="https://github.com/sortalongo/gas_sim"> gas simulator</a>
-  (inspired by an assignment Iryna had in on of her Astrophysics classes).
+  (inspired by an assignment Iryna had in one of her Astrophysics classes).
 
 <p>
   My new position on Google's Cloud Dataflow team is an opportunity
@@ -206,16 +206,181 @@
 
 <h3>Google <small>At the head of a new trail</small>
 
+<p>
+  Here in March, 2016, I'm just starting out at Google, so the nature of my work
+  and what I can expect to learn have yet to become clear. I chose the Cloud
+  Dataflow team because the project (open sourcing as <a
+  href="http://incubator.apache.org/projects/beam.html">Apache Beam</a>) is at
+  the forefront of data processing. Data processing is a mountain range I've
+  only seen from afar, so I want to bag a summit or two.
+
+<p>
+  I've had numerous conversations with friends about the reasons to choose
+  either a  startup or an established company. From what I've heard about
+  Google, there's a tremendous amount of knowledge embedded in their developer
+  tools, a term in which I'm including everything from local tools to
+  infrastructure. In other words, Google has its own (mostly) private atlas of
+  knowledge whose breadth most startups will never even approach. I chose Google
+  to read that atlas and use it to guide me through as much terrain as I can.
+  I'm sure their tooling will be a boon for my productivity, but I also want, as
+  much as possible, to understand the reasoning behind the design of those
+  tools.
+
+
 <h3>Twitter <small>A path to a new land</small>
+
+<p>
+  I worked at Twitter as an intern in Summer 2012 and full time from August 2013
+  to March 2016. It was my first serious foray into the land of Computer Science.
+  I'd taken many CS classes in college, but my time was limited by the requirements
+  of my Physics degree, so I didn't have time to learn the practicalities.
+  Computer have always fascinated me, though, and I was eager to break into a
+  (lucrative) new field.
+
+<p>
+  I spent both the internship and full time on the Observability team, Twitter's
+  internal monitoring team. From there, I got a good deal of experience from
+  running the stack itself (which I'll describe presently), but also using the
+  team as a vantage point into other teams' challenges. Observability was
+  something of a nexus point between the operations teams (SREs and Command &
+  Control), software engineers who worked on live services (mostly the
+  <i>Logic</i> part in <i>Example 2</i> in Marius's excellent <a
+  href="https://monkey.org/~marius/redux.html">talk on Finagle</a>), and
+  software engineers who worked on common libraries (e.g. Finagle itself).
+
+<p>
+  The Observability stack has a pretty straightforward design, but a great deal
+  of complexity in practice. You can refer to this <a href="https://blog.twitter.com/2013/observability-at-twitter">
+  outdated blog post</a> for an understanding of what it looked like when I started.
+  Some components have shifted or been removed since, but much of it remains the same.
+  The data flow as follows:
+  <ul>
+    <li>
+      Applications aggregate their metrics, such as counters and histograms, into
+      minutely windows.
+    <li>
+      Every minute, a colocated process queries an HTTP endpoint for a JSON dump
+      of of that window's metrics and forwards the dump to the timeseries
+      writing service.
+    <li>
+      The writing service processes these dumps and writes them to the
+      underlying timeseries database (<a
+      href="https://blog.twitter.com/2014/manhattan-our-real-time-multi-tenant-distributed-database-for-twitter-scale">
+      Manhattan </a>) and the indexing service that tracks metric groupings.
+    <li>
+      A query for data is received by the timeseries reading service, so it
+      performs index lookups, retrieves timeseries data, and performs
+      computations specified in the query, returning the final result to the
+      caller.
+    <li>
+      The caller can either be a user via a chart on a webpage or command line
+      tool, or the alerting system. The latter operates by allowing users to
+      configure sets of queries to run periodically, along with criteria
+      determining the state of the query and a policy on how to notify in case
+      the state requires it.
+
+<p>
+  I spent most of my time working on the alerting system, maintaining the old one
+  at first, then later making a replacement for it. By the time I left, the
+  project to replace the alerting system had grown into a project to create a whole
+  new visualization UI with a new configuration system for users. The project,
+  which I led for the last 6 months, was productionized, and migration by users
+  from the old to new system was well under way.
+
+<p>
+  That work was my primary focus, but I dedicated substantial time to understanding
+  other libraries and systems. Finagle, and the underlying Util, are likely
+  the most involved codebase I've tried to understand. Documentation is
+  good for superficial topics, but very poor for understanding the involved depths
+  of Finagle. By spelunking through the uncharted caverns, I learned about some
+  of the problems encountered by RPC systems. However, I also learned higher-
+  level concepts: the importance of documentation, including what kinds of
+  documentation are and aren't worth spending time on; the power of well-considered
+  abstractions for simplifying APIs; techniques for spelunking more efficiently,
+  e.g. trying to answer a single question at a time, using types to simplify
+  reasoning, and using grep effectively. I learned about the misery of being
+  on call when all the services are burning up. I learned to enjoy helping users
+  with their problems instead of resenting the time they took away from my "real
+  work".
 
 <h3>Caltech <small>Above the tree line</small>
 
+<p>
+  My experience of college was untypical by the standards of most public
+  universities. I knew when I accepted that Caltech has a reputation for brutal
+  academic standards, but I wasn't expecting the degree to which that would
+  hold. It was like the difference between seeing a trail on a map and actually
+  hiking it. You know it's labeled "very strenuous" and that it's a ten thousand
+  foot elevation gain over 15 miles, but you really don't understand what that
+  means until you're gasping for air, legs cramping, racing the implacable sun
+  to get to the top before night comes. I did get some advance warning when I
+  took the Math and Physics placement tests. I was placed in the remedial Math
+  section and didn't test out of the introductory Physics class despite my 5s on
+  the Calculus BC and both Physics C AP tests, the latter of which I'd taught
+  myself.
+
+<p>
+  As the trimesters passed, each one presenting a new gauntlet of challenges to
+  face, I had little idle time. There was usually time for a single social
+  outing per week and maybe a few hours of video games or TV. Most socializing
+  happened collaborating on sets, the furnaces whose heat smelted away the slag
+  of unfamiliarity and tact from my friendships, leaving behind close
+  friendships that I expect will last a lifetime despite long distance. The
+  remainder of the time was spent at the gym, working with the same friends to
+  hone our bodies the way our studies were honing our minds.
+
+<p>
+  Looking back, my time at Caltech is some of the most valued of my life. I
+  discovered that "being smart" is not about already knowing everything you're
+  supposed to know, but rather about having the humility to admit you don't know
+  something and the dedication to figure it out. I learned how to organize my
+  time, and how to take advantage of my natural tendencies to be more efficient.
+  I learned how to deal amicably with people who think completely differently
+  from myself and how to build strong friendships with those who think compatibly.
+  I realized the importance of humility, but gained confidence in myself to take on
+  new challenges. It really was like a long, strenuous hike. 4 years of
+  "<a href="http://www.backcountry.com/explore/type-ii-fun"> Type-II fun</a>
+  interspersed with a healthy share of Type-I. I came away with far more than
+  I had when I arrived.
+
+
 <h3>Carroll High School <small>Strolling through the grassy foothills</small>
+
+<p>
+  I grew up a lot in high school, but I can't say the academics were the main
+  challenge. Those 4 years were spent learning human skills. I made a lot
+  of progress figuring out how to interact with people:
+  how to avoid insulting potential friends, how to get over the self-consciousness
+  of new situations. I discovered the gratification of working hard towards a goal
+  from the Cross Country team.
+
+<p>
+  I was not particularly driven, and I didn't really have a goal. I meandered
+  around idly, doing what my parents told me to do (usually), but often
+  halfheartedly. I did my chores, but needed many reminders. I got good grades,
+  but not because I studied. I played the violin, but didn't practice
+  methodically like I knew I should. I ran, but I would often stop early
+  when it became too painful, and I didn't go above 30 miles per week until my
+  junior year. I had crushes, but I didn't act on them.
+
+<p>
+  I gradually discovered what I was missing. I dedicated myself to running in my
+  senior year, and I buckled down and studied for standardized tests. I applied
+  to top colleges, aiming high. The whole picture didn't come together, though.
+  It would take another 4 years at Caltech for me to understand how I can be
+  successful. Don't misunderstand me, I'm not claiming I know any "secrets to
+  success" or anything cheesy like that. Those are far from secret: consistency,
+  goals, and humility. What I've done is figure out how to motivate myself to do
+  these things. That doesn't mean I won't encounter problems in the future or
+  that I won't fail, but I hope to tackle those problems head on and get back on
+  my feet after a failure. I learned how to walk. Now I need to get to exploring
+  the landscape before me.
 
 <h2> Afterword
 
 <p>
-  The landscape metaphor is inadequate for capturing the whole picture, since it entirely
-  misses the self-reinforcing nature of knowledge acquistion. That is to say,
-  knowledge begets more knowledge, typically faster. I still like the metaphor.
-  It plays to my love of nature, and is a useful medium for expressing my thoughts.
+  The landscape metaphor is inadequate for capturing the whole picture, since it
+  entirely misses the self-reinforcing nature of knowledge acquisition. That is
+  to say, knowledge begets more knowledge, typically faster. I still like the
+  metaphor. It plays to my love of nature, and is a useful medium for expressing
+  my thoughts. I hope it wasn't cumbersome or cliché.
