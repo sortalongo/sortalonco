@@ -16,6 +16,22 @@ flags: {}
 # Extra package databases containing global packages
 extra-package-dbs: []
 
+# Enable builds in Docker
+docker:
+  enable: true
+
+# Generate a Docker image
+image:
+  containers:
+      # New image will be called snoyberg/yesodweb
+    - name: sortalongo/sortalonco
+      # Base it on the stack-run images
+      base: fpco/stack-run
+      # Include some config and static files in the image
+      add:
+        config: /config
+        static: /static
+
 # Control whether we use the GHC we find on the path
 # system-ghc: true
 
