@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: webserver-svc
+  labels:
+    version: v1
+    env: prod
+    group: webserver
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 3000
+  selector:
+    env: prod
+    group: webserver
