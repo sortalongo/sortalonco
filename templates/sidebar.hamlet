@@ -1,5 +1,5 @@
 <div id="#{sidebarId}" .sidebar role="navigation">
-  <ul .hidden-xs.hidden-sm>
+  <ul>
     $forall (page, isActive) <- pages
       <li role="presentation">
         <a href="@{page}" :isActive:.active>

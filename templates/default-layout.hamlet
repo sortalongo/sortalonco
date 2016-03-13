@@ -1,10 +1,10 @@
 $maybe msg <- mmsg
   <div #message>#{msg}
 <div .row.banner>
-  <div .col-xs-2.banner-title>
+  <div .col-md-2.banner-title>
     sortalon.co
 
-  <div .col-xs-10.banner-follow>
+  <div .col-md-10.banner-follow>
       Dan Sotolongo <br/>
       @sortalongo <br/>
       sortalongo@gmail.com

@@ -1,6 +1,7 @@
 module Handler.Util where
 
 import Import
+import CssUtil
 import Data.List (init)
 import Text.Julius (RawJS (..))
 

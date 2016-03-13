@@ -1,0 +1,48 @@
+* {
+  ^{platformPrefixes "box-sizing" "border-box"}
+}
+
+html {
+  ^{platformPrefixes "text-size-adjust" "100%"}
+
+  font-family: sans-serif;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4;
+  font-size: 14px;
+  color: #{colorPrimary};
+}
+
+a {
+  color: #{colorAccent};
+}
+
+a:hover {
+  color: #{colorAccentDark};
+}
+
+footer {
+  padding-top: 1em;
+  color: gray;
+  font-size: 12px;
+}
+
+.banner {
+  color: gray;
+  padding: 1em 0;
+
+  > .banner-title {
+    font-size: 24px;
+  }
+
+  > .banner-follow {
+    color: gray;
+    font-size: 12px;
+  }
+
+  > .banner-follow::first-line {
+    font-weight: bold;
+  }
+}
