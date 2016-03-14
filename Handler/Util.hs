@@ -8,11 +8,11 @@ import Text.Julius (RawJS (..))
 withSidebar :: Route App -> Widget -> Widget
 withSidebar route content = do
   [whamlet|
-    <div.row>
-      <div.col-md-2.col-sidebar>
+    <div.container>
+      <div.sidebar-container>
         ^{sidebarWidget route}
 
-      <div.col-md-10>
+      <div.flex-5>
         ^{content}
   |]
 

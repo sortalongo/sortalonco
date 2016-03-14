@@ -43,13 +43,14 @@ $newline never
     <script>
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
   <body>
-    <div class="container">
+    <div>
       <header>
       <div id="main" role="main">
         ^{pageBody pc}
       <footer>
         #{appCopyright $ appSettings master}<br/>
-        Check out the webserver code powering this site on Github!
+        Check out the code powering this site on 
+        <a href="https://github.com/sortalongo/sortalonco">Github</a>!
 
     $maybe analytics <- appAnalytics $ appSettings master
       <script>

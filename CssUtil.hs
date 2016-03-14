@@ -7,10 +7,10 @@ colorPrimary :: Text
 colorPrimary = "hsl(0, 0%, 20%)"
 
 colorAccent :: Text
-colorAccent = "hsl(120, 60%, 35%)"
+colorAccent = "hsl(120, 60%, 40%)"
 
 colorAccentDark :: Text
-colorAccentDark = "hsl(120, 60%, 25%)"
+colorAccentDark = "hsl(120, 60%, 30%)"
 
 platformPrefixes :: Text -> Text -> Mixin
 platformPrefixes prop val =[luciusMixin|

@@ -3,9 +3,14 @@ const makeSticky = (element) => {
   const removeSticky = () => {
     element.className = element.className.replace(regex , '')
   }
+
+  console.log(element.getBoundingClientRect())
+  
   removeSticky()
 
   const rect = element.getBoundingClientRect()
+
+  console.log(rect)
 
   const top = rect.top + window.pageYOffset
   const bottom = rect.bottom + window.pageYOffset

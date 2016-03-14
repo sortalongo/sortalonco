@@ -1,12 +1,12 @@
+.sidebar-container
+  flex: 1 0
+
 .sidebar
   font-size: 12pt
 
-  a
-    text-decoration: none
-
   > ul
     padding: .5em 0em
-    margin: 0px
+    margin: 0
 
     > li
       list-style: none
@@ -22,3 +22,10 @@
       > a:hover
         padding-left: 8px
         border-left: 2px solid #{colorAccentDark}
+
+@media all and (max-width: 600px)
+  .sidebar-container
+    flex: 1 100%
+
+  .sidebar
+    position: relative

@@ -1,3 +1,4 @@
+/* General Settings */
 * {
   ^{platformPrefixes "box-sizing" "border-box"}
 }
@@ -13,9 +14,12 @@ body {
   line-height: 1.4;
   font-size: 14px;
   color: #{colorPrimary};
+
+  margin: 1em;
 }
 
 a {
+  text-decoration: none;
   color: #{colorAccent};
 }
 
@@ -23,15 +27,32 @@ a:hover {
   color: #{colorAccentDark};
 }
 
-footer {
-  padding-top: 1em;
-  color: gray;
-  font-size: 12px;
+/* Flexbox classes */
+.container {
+  display: flex;
+  display: -webkit-flex;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1 0;
+}
+.flex-5 {
+  flex: 5 0;
+}
+
+@media all and (max-width: 600px) {
+  .sidebar { flex: 1 100%; }
+  .container { flex-wrap: wrap; }
+}
+
+/* Header and Footer */
 
 .banner {
   color: gray;
-  padding: 1em 0;
+  padding: 1em;
+  justify-content: space-between;
 
   > .banner-title {
     font-size: 24px;
@@ -45,4 +66,10 @@ footer {
   > .banner-follow::first-line {
     font-weight: bold;
   }
+}
+
+footer {
+  padding-top: 1em;
+  color: gray;
+  font-size: 12px;
 }
