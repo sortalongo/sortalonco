@@ -1,28 +1,27 @@
 kind: ReplicationController
 apiVersion: v1
 metadata:
-  name: webserver-rc
+  name: webserver-rc-v2
   labels:
-    version: v1
+    version: v2
     env: prod
     group: webserver
 spec:
   replicas: 3
   selector:
-    version: v1
+    version: v2
     env: prod
     group: webserver
   template:
     metadata:
       generateName: webserver-pod-
       labels:
-        version: v1
+        version: v2
         env: prod
         group: webserver
     spec:
       containers:
         - name: webserver
-          image: us.gcr.io/sortalonco/webserver
-          command: [ "sortalonco" ]
+          image: us.gcr.io/sortalonco/webserver:v2
           ports:
             - containerPort: 3000
