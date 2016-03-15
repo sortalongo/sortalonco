@@ -181,7 +181,7 @@
   mathematical theories that are checked by the type checker for correctness.
   The programming language Adga (<a
   href="https://en.wikipedia.org/wiki/Agda_(programming_language)">Overview</a>,
-  <a href="http://learnyouanagda.liamoc.net/pages/introduction.html">Learn You an Agda
+  \<a href="http://learnyouanagda.liamoc.net/pages/introduction.html">Learn You an Agda
   ) is a promising approach to making this idea more practically useful. To
   familiarize myself with Rust's interesting memory ownership model, I wrote a
   simple <a href="https://github.com/sortalongo/gas_sim"> gas simulator</a>
@@ -244,7 +244,7 @@
   team as a vantage point into other teams' challenges. Observability was
   something of a nexus point between the operations teams (SREs and Command &
   Control), software engineers who worked on live services (mostly the
-  <i>Logic</i> part in <i>Example 2</i> in Marius's excellent <a
+  \<i>Logic</i> part in <i>Example 2</i> in Marius's excellent <a
   href="https://monkey.org/~marius/redux.html">talk on Finagle</a>), and
   software engineers who worked on common libraries (e.g. Finagle itself).
 

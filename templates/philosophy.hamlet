@@ -149,14 +149,14 @@ proof-y
   either due to suicide or despondence. I am no nihilist, but as I said, I also
   do not believe in purpose. Instead, I think the choice is merely a false
   dichotomy brought about by a
-  <a href="https://en.wikipedia.org/wiki/Optical_illusion#Cognitive_illusions">cognitive illusion
+  \<a href="https://en.wikipedia.org/wiki/Optical_illusion#Cognitive_illusions">cognitive illusion
   for which I do not know the name (please let me know if you do). I'll call it
   an illusion of scale by abstraction.
 
 <p>
   The human mind is only able to retain and reason about a certain degree of complexity.
   In order to reason about highly-complex systems, we use approximations called
-  <i>abstractions</i>, which package up the complexity of a system into
+  \<i>abstractions</i>, which package up the complexity of a system into
   a more simple representation with rules that approximate the behavior of the
   underlying system. For example, the idea of a government is an abstraction
   of the actual behavior of large numbers of people organized in a mutually-#
@@ -203,7 +203,7 @@ proof-y
 
 <p>
   Well, until recently, I was a
-  <a href="https://en.wikipedia.org/wiki/Two-level_utilitarianism">Two-level Utilitarian#
+  \<a href="https://en.wikipedia.org/wiki/Two-level_utilitarianism">Two-level Utilitarian#
   , which contends that the goal of ethics is to maximize the happiness of
   people. It does so by laying out general rules that people should follow most
   of the time, but leaving room for exceptions when a decision that breaks

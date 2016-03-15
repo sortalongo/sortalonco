@@ -9,7 +9,7 @@
   "Why should I make a website? I don't have anything worth " This question was one that has long held me back
   from doing so.
 
-   Until recently, creating a personal website struck me as
+  Until recently, creating a personal website struck me as
   frivolous or self-aggrandizing. "When I have something meaningful to share, then
   I'll make one," I told myself. Though I've yet to create something with
   meaningful impact that I think is worth proselytizing, I've concluded that a
@@ -37,7 +37,7 @@
   have worked with a few: Apache, <a href="http://expressjs.com/">ExpressJs</a>,
   Macaw (Twitter's original Scala framework), and <a href="https://twitter.github.io/finatra/">Finatra 2</a>.
   Yesod is far and away the most pleasant I've worked with, not least because its
-  <a href="http://www.yesodweb.com/book">User Guide</a> is excellent. Its main
+  \<a href="http://www.yesodweb.com/book">User Guide</a> is excellent. Its main
   selling point is the tight integration between the server code and served
   content: the use of Template Haskell allows you to have a single source of
   truth (verified by the compiler!) instead of having one on each side of the
@@ -48,6 +48,6 @@
 
 <p>
   I've dabbled with <a href="https://facebook.github.io/react/">React</a> and
-  <a href="https://www.polymer-project.org/1.0/">Polymer</a>, though I'm not sure
+  \<a href="https://www.polymer-project.org/1.0/">Polymer</a>, though I'm not sure
   how well they play with Yesod. This site is not complicated enough to require
   those libraries. Once I take on a more WebApp-like project, I'll report back.
