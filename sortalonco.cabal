@@ -86,7 +86,7 @@ library
                  , case-insensitive
                  , wai
 
-executable         sortalonco
+executable         webserver
     if flag(library-only)
         Buildable: False
 

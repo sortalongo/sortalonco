@@ -32,7 +32,7 @@ image:
         config: /config
         static: /static
       entrypoints:
-        - sortalonco
+        - webserver
 
 # Control whether we use the GHC we find on the path
 # system-ghc: true
