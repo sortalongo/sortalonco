@@ -1,3 +1,7 @@
+
+<img src=@{StaticR img_kiteboarding_wide_jpg} alt="kiteboarding" width="100%"/>
+<img.profpic src=@{StaticR img_profpic_png} alt="profile" width="25%"/>
+
 <h1>About Me
 
 <p>

@@ -7,6 +7,7 @@ getHomeR :: Handler Html
 getHomeR = defaultLayout . withSidebar HomeR $ do
   setTitle "sortalon.co"
   $(widgetFile "homepage")
+  addStylesheet $ StaticR css_util_css
 
 getCareerR :: Handler Html
 getCareerR = defaultLayout . withSidebar CareerR $ do

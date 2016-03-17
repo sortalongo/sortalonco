@@ -1,0 +1,7 @@
+.profpic {
+  display: block;
+  margin-top: -12%;
+
+  border: 10px solid white;
+  border-radius: 100%;
+}

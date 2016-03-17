@@ -9,6 +9,8 @@
   oneself in an unknown land, breaking new ground in the hopes of finding
   interesting new sights and hopefully taking the time to mark them on our map.
 
+<img src="@{StaticR img_haleakala_jpg}" alt="landscape" width="100%"/>
+
 <p>
   In this landscape, the elevation at a location is the unreachability of that
   knowledge, and the steepness of the slope is the difficulty of the route to
@@ -114,6 +116,7 @@
   end of the pipe). Operating systems and hardware do not share a common medium
   with the other components, and so are out of reach at the moment.
 
+<img src=@{StaticR img_ranier_jpg} alt="mountain" width="100%"/>
 <p>
   So, what does this buy us? Merging the components means the components become
   libraries, not whole applications. They can interact via a programmatic API
@@ -213,6 +216,8 @@
   href="http://incubator.apache.org/projects/beam.html">Apache Beam</a>) is at
   the forefront of data processing. Data processing is a mountain range I've
   only seen from afar, so I want to bag a summit or two.
+
+<img src="@{StaticR img_san_bruno_jpg}" alt="foggy trail" width="100%"/>
 
 <p>
   I've had numerous conversations with friends about the reasons to choose
