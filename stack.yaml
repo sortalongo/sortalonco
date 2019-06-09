@@ -19,6 +19,8 @@ extra-package-dbs: []
 # Enable builds in Docker
 docker:
   enable: true
+# Ignore version bounds... easy, but risky.
+allow-newer: true
 
 # Generate a Docker image
 image:
