@@ -21,7 +21,7 @@ stanzas:
       # You can specify one or more hostnames for your application to respond
       # to. The primary hostname will be used for generating your application
       # root.
-      - www.sortalonco.com
+      - sortalonco.com
 
     # Enable to force Keter to redirect to https
     # Can be added to any stanza
@@ -40,27 +40,11 @@ stanzas:
   - type: redirect
 
     hosts:
-      - sortalonco.com
+      - www.sortalonco.com
     actions:
-      - host: www.sortalonco.com
+      - host: sortalonco.com
         # secure: false
         # port: 80
 
     # Uncomment to switch to a non-permanent redirect.
     # status: 303
-
-# Use the following to automatically copy your bundle upon creation via `yesod
-# keter`. Uses `scp` internally, so you can set it to a remote destination
-# copy-to: user@host:/opt/keter/incoming/
-
-# You can pass arguments to `scp` used above. This example limits bandwidth to
-# 1024 Kbit/s and uses port 2222 instead of the default 22
-# copy-to-args:
-#   - "-l 1024"
-#   - "-P 2222"
-
-# If you would like to have Keter automatically create a PostgreSQL database
-# and set appropriate environment variables for it to be discovered, uncomment
-# the following line.
-# plugins:
-#   postgres: true
