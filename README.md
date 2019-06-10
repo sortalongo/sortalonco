@@ -3,7 +3,8 @@
 This is the code that runs my personal site. It uses the
 [Yesod](http://www.yesodweb.com/page/quickstart) framework using the default
 site template, builds with
-[Stack](http://docs.haskellstack.org/en/stable/README/), and deploys Docker.
+[Stack](http://docs.haskellstack.org/en/stable/README/), and deploys a Docker container
+on Google Cloud Run.
 
 ## Development
 
@@ -72,28 +73,13 @@ flow for a Google Container Engine cluster and Google Container Repository. By
 the end, you'll have the `gcloud` and `kubectl` tools set up to talk to your
 G.E accounts & projects.
 
-1. Push the image to GCR:
+1. Push the image to GCR (make sure you ran `gcloud auth configure-docker`):
   ```bash
   $ docker tag sortalongo/sortalonco-webserver us.gcr.io/PROJECT/webserver:VERSION
-  $ gcloud docker push us.gcr.io/PROJECT/webserver:VERSION
+  $ docker push us.gcr.io/PROJECT/webserver:VERSION
   ```
-2. Go into `k8s.rc.yaml`, and update the resource names, labels, and
-  image name to the respective version.
-3. Do a rolling update using Kubernetes:
-  ```bash
-  $ kubectl rolling-update webserver-rc-OLD_VERSION -f k8s.rc.yaml
-  Created webserver-rc-v2
-  Scaling up webserver-rc-v2 from 0 to 3, scaling down webserver-rc from 3 to 0 (keep 3 pods available, don\'t exceed 4 pods)
-  Scaling webserver-rc-v2 up to 1
-  Scaling webserver-rc down to 2
-  Scaling webserver-rc-v2 up to 2
-  Scaling webserver-rc down to 1
-  Scaling webserver-rc-v2 up to 3
-  Scaling webserver-rc down to 0
-  Update succeeded. Deleting webserver-rc
-  replicationcontroller "webserver-rc" rolling updated to "webserver-rc-v2"
-  ```
-  You can get `OLD_VERSION` by looking at the name of the running replication
-  controller (`kubectl get rcs`).
+2. Create a service in the Cloud Run UI using the pushed image.
 
-  You can monitor the state of the pods by looping over `kubectl get pods`.
+(If you're wondering why this README is so basic, it's because it used to detail deployment
+using Kubernetes. Cloud Run is way simpler, but the doc was already written, so I just
+trimmed it down)
