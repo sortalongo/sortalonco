@@ -21,7 +21,7 @@ stanzas:
       # You can specify one or more hostnames for your application to respond
       # to. The primary hostname will be used for generating your application
       # root.
-      - sortalonco.com
+      - www.sortalonco.com
 
     # Enable to force Keter to redirect to https
     # Can be added to any stanza
@@ -40,9 +40,9 @@ stanzas:
   - type: redirect
 
     hosts:
-      - www.sortalonco.com
+      - sortalonco.com
     actions:
-      - host: sortalonco.com
+      - host: www.sortalonco.com
         # secure: false
         # port: 80
 
